@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos de la Tienda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Likes.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Productos Favoritos</h1>
+        </header>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="favorite-list">
+                    <ul id="favorites" class="list-unstyled"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+    // Productos disponibles (normalmente estos vendrían de un backend o estarían en una base de datos)
+const products = [
+    { id: 1, name: 'Producto 1', image: 'https://via.placeholder.com/150' },
+    { id: 2, name: 'Producto 2', image: 'https://via.placeholder.com/150' },
+    { id: 3, name: 'Producto 3', image: 'https://via.placeholder.com/150' },
+    { id: 4, name: 'Producto 4', image: 'https://via.placeholder.com/150' },
+];
+
+// Simulación de añadir productos a favoritos para visualización
+function addToFavorites(productId) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.includes(productId)) {
+        favorites.push(productId);
+    }
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+
+// Añadir productos inventados a favoritos
+addToFavorites(1);
+addToFavorites(3);
+
+// Renderiza la lista de favoritos desde localStorage
+function renderFavorites() {
+    const favoritesList = document.getElementById('favorites');
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    favoritesList.innerHTML = '';
+    
+    if (favorites.length === 0) {
+        const emptyMessage = document.createElement('li');
+        emptyMessage.textContent = 'No hay productos favoritos guardados.';
+        favoritesList.appendChild(emptyMessage);
+        return;
+    }
+
+    favorites.forEach(productId => {
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            const listItem = document.createElement('li');
+            const productImage = document.createElement('img');
+            productImage.src = product.image;
+            const productName = document.createElement('h2');
+            productName.textContent = product.name;
+            listItem.appendChild(productImage);
+            listItem.appendChild(productName);
+            favoritesList.appendChild(listItem);
+        }
+    });
+}
+
+// Inicializa la lista de favoritos al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    renderFavorites();
+});
+ 
+    </script>
+</body>
+</html>
+
+
