@@ -1,5 +1,3 @@
-/* Función para mostra/ocultar el menú */
-
 var lista = document.querySelectorAll('.nav li');
 function activarLink() {
     lista.forEach((item) =>
@@ -10,13 +8,13 @@ function activarLink() {
 lista.forEach((item) =>
     item.addEventListener('mouseover', activarLink));
 
-/* Función para mostra/ocultar el menú */
+/* Función para mostrar/ocultar el menú */
 
-var toogle = document.querySelector('.toggle');
+var toggle = document.querySelector('.toggle');
 var nav = document.querySelector('.nav');
 var container = document.querySelector('.container');
 
-toogle.oneclick = function() {
-    nav.classList.toogle('active');
-    container.classList.toogle('active');
+toggle.onclick = function() {
+    nav.classList.toggle('active');
+    container.classList.toggle('active');
 }
