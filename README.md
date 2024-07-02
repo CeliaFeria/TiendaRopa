@@ -8,7 +8,7 @@ La siguiente iniciativa ha sido creada por el Grupo 2 como proyecto final para e
 
 La idea del proyecto es crear una aplicación web para una tienda de ropa online que permita a los usuarios explorar, buscar y comprar diversos productos de moda, incluyendo funciones como: navegación por categorías, búsqueda de productos, gestión de carrito de compras y realización de pagos. 
 
-El público objetivo es la franja demográfica de personas jóvenes de todos los géneros interesadas en el punto de convergencia entre la última moda y la subcultura gótica, por lo que se ofrece un amplio rango de categorías para que los usuarios puedan escoger.
+El público objetivo es la franja demográfica de personas jóvenes de todos los géneros interesadas en el punto de convergencia entre la última moda y el depórte, también conocido como leisurewear, por lo que se ofrece un amplio rango de categorías para que los usuarios puedan escoger.
 
 # Proceso de flujos
 
@@ -24,11 +24,34 @@ Próximamente.
 
 # Modelo de datos
 
-Próximamente.
+![Sin título](https://github.com/CeliaFeria/TiendaRopa/assets/166528991/a5ac46c5-ae42-4da2-b70d-6db24e310576)
 
 # Mapa de navegabilidad
 
-Próximamente.
+- Inicio/Página Principal.
+- Acerca de Nosotros.
+- Preguntas Frecuentes.
+- Contacto.
+- Carrito.
+- Perfil usuario.
+- Login.
+- Registro usuario.
+- Favoritos.
+- Detalle del producto.
+- Ropa Hombre.
+- Ropa Mujer.
+- Ropa Niños.
+- Ropa Interior.
+- Zapatos Deportivos.
+- Vaqueros.
+- Abrigos.
+- Página administrador.
+- Clientes.
+- Ventas.
+- Stock.
+- Promociones.
+- Contáctanos (correo electrónico y número de teléfono).
+- RRSS.
 
 # Conclusiones
 
