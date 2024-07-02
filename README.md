@@ -24,7 +24,7 @@ Próximamente.
 
 # Modelo de datos
 
-![Sin título](https://github.com/CeliaFeria/TiendaRopa/assets/166528991/a5ac46c5-ae42-4da2-b70d-6db24e310576)
+Próximamente.
 
 # Mapa de navegabilidad
 
