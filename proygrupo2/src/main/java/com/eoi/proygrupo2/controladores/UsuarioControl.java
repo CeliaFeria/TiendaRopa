@@ -65,7 +65,17 @@ public class UsuarioControl {
     }
 
 
+    @PostMapping("/busqueda")
+    public String buscar(String termino, Usuario usuario) {
+        busquedaSrv.GuardarBusqueda(termino, usuario);
+        return "resultadosBusqueda";
+    }
 
+    @GetMapping("/historial")
+    public String verHistorial() {
+        busquedaSrv.obtenerHistorialBusquedas();
+        return "historialBusquedas";
+    }
 }
 
 
