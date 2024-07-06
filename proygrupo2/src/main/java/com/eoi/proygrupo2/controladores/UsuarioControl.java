@@ -1,7 +1,10 @@
 package com.eoi.proygrupo2.controladores;
 
+import com.eoi.proygrupo2.entidades.HistorialBusquedas;
 import com.eoi.proygrupo2.entidades.Usuario;
 import com.eoi.proygrupo2.entidades.UsuarioDetalle;
+import com.eoi.proygrupo2.servicios.BusquedaSrv;
+import com.eoi.proygrupo2.servicios.BusquedaSrvImpl;
 import com.eoi.proygrupo2.servicios.UsuarioSrv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,14 +12,20 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
 public class UsuarioControl {
 
     @Autowired
-    private UsuarioSrv usuarioSrv;
+    UsuarioSrv usuarioSrv;
+
+    @Autowired
+    BusquedaSrv busquedaSrv;
 
     @GetMapping("/usuario/registro")
     public String mostrarFormularioRegistro(Model model) {
@@ -54,6 +63,9 @@ public class UsuarioControl {
         usuarioSrv.actualizarDetallesUsuario(detalle);
         return "detallesUsuario";
     }
+
+
+
 }
 
 

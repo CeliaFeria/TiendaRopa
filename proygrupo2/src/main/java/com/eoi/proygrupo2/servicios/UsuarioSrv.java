@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface UsuarioSrv {
 
-    Usuario login(String usuario, String contraseña);
+    void login(String usuario, String contraseña);
     Usuario registrarUsuario(Usuario usuario);
     Optional<UsuarioDetalle> actualizarDetallesUsuario(UsuarioDetalle usuarioDetalle);
 }

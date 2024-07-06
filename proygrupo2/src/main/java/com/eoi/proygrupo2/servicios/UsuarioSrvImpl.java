@@ -19,8 +19,7 @@ public class UsuarioSrvImpl implements UsuarioSrv {
     private RepoDetalleUsuario repoDetalleUsuario;
 
     @Override
-    public Usuario login(String usuario, String password) {
-        return null;
+    public void login(String usuario, String password) {
     }
 
     @Override
