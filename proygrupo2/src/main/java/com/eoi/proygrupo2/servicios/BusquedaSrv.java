@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface BusquedaSrv {
     void GuardarBusqueda(String terminobusqueda, Usuario usuario);
-    List<HistorialBusquedas> obtenerHistorialBusquedas();
+    List<HistorialBusquedas> obtenerHistorialBusquedas(Usuario usuario);
 }

@@ -64,16 +64,15 @@ public class UsuarioControl {
         return "detallesUsuario";
     }
 
-
     @PostMapping("/busqueda")
-    public String buscar(String termino, Usuario usuario) {
+    public String buscar(@RequestParam String termino, @ModelAttribute("usuario") Usuario usuario) {
         busquedaSrv.GuardarBusqueda(termino, usuario);
         return "resultadosBusqueda";
     }
 
     @GetMapping("/historial")
-    public String verHistorial() {
-        busquedaSrv.obtenerHistorialBusquedas();
+    public String verHistorial(@ModelAttribute("usuario") Usuario usuario, Model model) {
+        model.addAttribute("historial", busquedaSrv.obtenerHistorialBusquedas(usuario));
         return "historialBusquedas";
     }
 }
