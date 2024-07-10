@@ -19,10 +19,6 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id", nullable = false)
     private int id;
-
-    @ElementCollection(fetch = FetchType.EAGER)
-    private List<String> roles = new ArrayList<>();
-
     private String nombre;
     private String contraseña;
     private String email;
@@ -33,7 +29,7 @@ public class Usuario {
             joinColumns = @JoinColumn(name = "id", nullable = false),
             inverseJoinColumns = @JoinColumn(name="rol_id", nullable = false)
     )
-    private List<Rl> role;
+    private List<Rl> roles;
 
     @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
     private UsuarioDetalle detalle;
