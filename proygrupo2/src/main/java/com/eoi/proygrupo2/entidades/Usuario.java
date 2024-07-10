@@ -15,9 +15,9 @@ import java.util.Set;
 @NoArgsConstructor
 public class Usuario {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id", nullable = false)
     private int id;
     private String nombre;
     private String contraseña;
